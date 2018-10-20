@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=20min.ch
+Exec=webapp-container  --user-agent-string="Mozilla/5.0 (Linux; Android 8.0; Pixel) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.2125.102 Mobile Safari/537.36" --webappUrlPatterns=https?://*.20min.ch/*,https://www.friday-magazine.ch/*,https://www.tilllate.com/* http://m.20min.ch/
+Icon=icon.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
