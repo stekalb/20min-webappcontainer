@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=ZVV Fahrplan
 Type=Application
-Icon=icon.png
+Icon=img/logo.svg
 Exec=qmlscene %u qml/Main.qml
 Terminal=false
 X-Ubuntu-Touch=true

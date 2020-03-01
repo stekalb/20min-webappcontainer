@@ -12,5 +12,5 @@
     "maintainer": "Stefan Kalb <stefan.kalb@gmx.ch>",
     "name": "zvvfahrplan.ste-kal",
     "framework" : "ubuntu-sdk-16.04",
-    "version": "1.0"
+    "version": "1.1"
 }
