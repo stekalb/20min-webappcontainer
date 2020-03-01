@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=ZVV Fahrplan
+Type=Application
+Icon=icon.png
+Exec=qmlscene %u qml/Main.qml
+Terminal=false
+X-Ubuntu-Touch=true
+X-Ubuntu-Default-Department-ID=transport
+X-Ubuntu-Splash-Image=img/splash.svg
