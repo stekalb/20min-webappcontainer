@@ -20,7 +20,7 @@
 #################################################################
 
 #APP_ID needs to match the "name" field of the click manifest
-APP_ID=zvvfahrplan.ste-kal
+APP_ID=20minch.ste-kal
 
 #provides a way for the IDE to set a specific target folder for the translations
 TRANSLATION_ROOT=.
@@ -28,7 +28,7 @@ TRANSLATION_ROOT=.
 MO_FILES=$(shell for infile in `find po -name "*.po"`; do basename -s .po $$infile | awk '{print "$(TRANSLATION_ROOT)/share/locale/" $$0 "/LC_MESSAGES/$(APP_ID).mo";}' ; done)
 QMLJS_FILES=$(shell find . -name "*.qml" -o -name "*.js" | grep -v ./tests)
 
-all: po/tagesanzeiger.pot
+all: po/20minch.pot
 
 autopilot:
 	chmod +x tests/autopilot/run
@@ -41,8 +41,8 @@ check:
 
 build-translations: $(MO_FILES)
 
-po/tagesanzeiger.pot: $(QMLJS_FILES)
-	mkdir -p $(CURDIR)/po && xgettext -o po/tagesanzeiger.pot --qt --c++ --add-comments=TRANSLATORS --keyword=tr --keyword=tr:1,2 $(QMLJS_FILES) --from-code=UTF-8
+po/20minch.pot: $(QMLJS_FILES)
+	mkdir -p $(CURDIR)/po && xgettext -o po/20minch.pot --qt --c++ --add-comments=TRANSLATORS --keyword=tr --keyword=tr:1,2 $(QMLJS_FILES) --from-code=UTF-8
 
 $(TRANSLATION_ROOT)/share/locale/%/LC_MESSAGES/$(APP_ID).mo: po/%.po
 	mkdir -p $(TRANSLATION_ROOT)/share/locale/$*/LC_MESSAGES && msgfmt -o $(@) $(<)

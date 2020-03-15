@@ -1,0 +1,15 @@
+{
+    "policy_groups": [
+        "networking",
+        "accounts",
+        "audio",
+        "content_exchange",
+        "location",
+        "camera",
+        "microphone",
+        "video",
+        "keep-display-on",
+        "webview"
+    ],
+    "policy_version": 16.04
+}

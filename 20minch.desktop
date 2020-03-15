@@ -1,9 +1,9 @@
 [Desktop Entry]
-Name=ZVV Fahrplan
+Name=20 Minuten CH
 Type=Application
-Icon=img/logo.svg
+Icon=img/icon.png
 Exec=qmlscene %u qml/Main.qml
 Terminal=false
 X-Ubuntu-Touch=true
-X-Ubuntu-Default-Department-ID=transport
+X-Ubuntu-Default-Department-ID=media
 X-Ubuntu-Splash-Image=img/splash.svg

@@ -1,9 +1,13 @@
 import QtQuick 2.9
-import Ubuntu.Web 0.2
+import Morph.Web 0.1
+import QtWebEngine 1.7
 import Ubuntu.Components 1.3
+import QtQuick.Window 2.2
 import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Content 1.1
+import Qt.labs.settings 1.0
+import QtSystemInfo 5.5
 
 Rectangle {
   id: bottomMenu
@@ -24,7 +28,7 @@ Rectangle {
     }
 
     Item {
-      width: parent.width/4
+      width: parent.width/3
       height: parent.height
 
       Icon {
@@ -44,7 +48,7 @@ Rectangle {
     }
 
     Item {
-      width: parent.width/4
+      width: parent.width/3
       height: parent.height
 
       Icon {
@@ -56,13 +60,16 @@ Rectangle {
       }
 
       MouseArea {
+        property string myTabletUrl: "https://www.20min.ch"
+        property string myMobileUrl: "https://m.20min.ch"
+        property string myUrl: (Screen.devicePixelRatio == 1.625) ? myTabletUrl : myMobileUrl
         anchors.fill: parent
-        onClicked: webview.url="https://online.fahrplan.zvv.ch/bin/query.exe/dn.html"
+        onClicked: webview.url=myUrl
       }
     }
 
     Item {
-      width: parent.width/4
+      width: parent.width/3
       height: parent.height
 
       Icon {
@@ -78,24 +85,6 @@ Rectangle {
         onClicked: {
           webview.reload()
         }
-      }
-    }
-
-    Item {
-      width: parent.width/4
-      height: parent.height
-
-      Icon {
-        anchors.centerIn: parent
-        width: units.gu(2.2)
-        height: width
-        source: Qt.resolvedUrl("../icons/flash-on.svg")
-        color: "#ffffff"
-      }
-
-      MouseArea {
-        anchors.fill: parent
-        onClicked: webview.url="https://online.fahrplan.zvv.ch/bin/help.exe/dn?tpl=himmap"
       }
     }
   }
